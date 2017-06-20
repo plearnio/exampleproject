@@ -1,11 +1,13 @@
 import React from 'react'
 
-import ShowItemPokemon from './components/ShowItemPokemon'
+import ShowItemPokemonAxios from './components/ShowItemPokemonAxios'
+import ShowItemPokemonFetch from './components/ShowItemPokemonFetch'
 
 const App = () =>
 (
   <div className="App">
-    <ShowItemPokemon />
+    <ShowItemPokemonAxios />
+    <ShowItemPokemonFetch />
   </div>
 )
 
