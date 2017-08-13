@@ -4,8 +4,7 @@ const mongoose = require('mongoose')
 
 const book = require('./route/book')
 const config = require('./config').mongo
-const x = 10
-console.log(`test ${x}`)
+
 mongoose.connect(`mongodb://${config.host}:${config.port}/${config.database}`)
 const app = express()
 
