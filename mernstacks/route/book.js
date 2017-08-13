@@ -1,6 +1,7 @@
 const express = require('express')
 
 const book = express.Router()
+const Books = require('../models/Books')
 
 book.use((req, res, next) => {
   next()
@@ -8,7 +9,10 @@ book.use((req, res, next) => {
 
 book.route('/')
   .get((req, res) => {
-    res.send('test index')
+    Books.find({}, (err, docs) => {
+      if (err) res.send(err)
+      else res.json(docs)
+    })
   })
   .post((req, res) => {
     console.log(req)
